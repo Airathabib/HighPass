@@ -1,0 +1,33 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("fonts#{$url}.woff2") format("woff2");
+    src: url("fonts/#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin btn-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+

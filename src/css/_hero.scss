@@ -1,0 +1,102 @@
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 29px;
+  max-width: 1289px;
+  margin: 0 auto;
+  padding-right: 10px;
+  margin-bottom: 64px;
+}
+
+.hero__left {
+  grid-column: 1 / 7;
+  position: relative;
+  background-image: url("image/Hero-left1903.webp");
+  @include bg-cover;
+  object-fit: cover;
+  min-height: 422px;
+  max-height: 624px;
+  display: flex;
+  padding: 59px;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  :first-child::before {
+    content: "#мастеркласс";
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    padding: 7px 15px;
+    background-color: $dark-grey;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &-desckr {
+    margin: 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-white;
+  }
+  &-h2 {
+    font-family: "TT Firs Neue";
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 115%;
+    color: $color-white;
+  }
+}
+
+.hero__btn {
+  @include btn-reset;
+  margin: 0;
+  width: 159px;
+  height: 50px;
+  background-color: $color-hover;
+  color: $color-white;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  outline: 0;
+
+  &:hover {
+    background-color: $color-focus;
+  }
+
+  &:focus-visible {
+    background-color: $color-hover;
+    border: 3px solid $color-active;
+  }
+
+  &:active {
+    background-color: $color-active;
+  }
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero__right {
+  grid-column: 7 / -1;
+  &-h3 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 108%;
+    color: $dark-grey;
+  }
+  &-wrapper{
+    display: grid;
+    column-gap: 30px;
+    row-gap: 26px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &-firstblock {
+    grid-column: 1 / -1;
+  }
+}

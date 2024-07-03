@@ -1,0 +1,197 @@
+.header {
+  position: relative;
+  height: 80px;
+  margin-bottom: 41px;
+  background-color: $dark-grey;
+}
+
+.header__top {
+  max-width: 1289px;
+  min-height: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+
+  &-logo {
+    margin-right: -52px;
+    outline: none;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 78px;
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    font-family: "TT Firs Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.nav__link {
+  &:focus-visible {
+    border: 1px solid $color-focus;
+    background-color: $color-focus;
+    outline: none;
+    visibility: hidden;
+  }
+
+  &:focus {
+    border: 1px solid $color-focus;
+    background-color: $color-focus;
+    outline: none;
+    visibility: hidden;
+  }
+  &:hover:not(:focus) {
+    color: $color-hover;
+  }
+
+  &:active:not(:focus) {
+    color: $color-active;
+  }
+}
+
+.menu-link {
+  display: none;
+  & .phone{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.menu-contact {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-hover;
+}
+
+.menu-close {
+  .header__nav {
+    display: none;
+  }
+}
+
+.btn-remove {
+  @include btn-reset;
+  position: absolute;
+  top: 0;
+  padding-top: 13px;
+  background-color: transparent;
+  display: none;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.search {
+  width: 20px;
+  position: relative;
+&-open-btn{
+  @include btn-reset;
+  position: relative;
+  z-index: 5;
+}
+  &__img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    fill: $color-white;
+    display: inline-block;
+  }
+
+  &__btn {
+    @include btn-reset;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      fill: $color-white;
+    }
+  }
+
+  & .search-remove {
+    @include btn-reset;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: 0;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  input {
+    width: 170px;
+    padding: 1px 10px 3px 7px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+    position: absolute;
+    left: -177px;
+    top: -12px;
+    opacity: 0;
+    border-bottom: 1px solid $color-search;
+    font-family: "TT Firs Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-search;
+    transition: opacity 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
+
+    &:hover {
+      border-bottom-color: $color-hover;
+    }
+    &:focus {
+      border-bottom-color: $color-hover;
+    }
+    &:active {
+      border-bottom-color: $color-active;
+    }
+  }
+}
+
+
+.header__bottom {
+  max-width: 100%;
+  background-color: #4a4a4a;
+  height: 45px;
+  display: none;
+}
+
+.burger {
+  @include btn-reset;
+  display: none;
+}

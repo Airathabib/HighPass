@@ -1,0 +1,204 @@
+.contacts-container {
+  max-width: 1286px;
+  margin: 0 auto;
+  margin-bottom: 66px;
+  padding-right: 10px;
+}
+
+.contacts-title-h2 {
+  margin: 0;
+  margin-bottom: 17px;
+  font-family: "TT Firs Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.map {
+  grid-column: 1 / 9;
+  margin-top: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.open-adress-btn {
+  @include btn-reset;
+  position: absolute;
+  top: 96px;
+  right: 243px;
+}
+
+.contacts-adress {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 406px;
+  height: 455px;
+  z-index: 1000;
+  padding: 173px 60px 0 60px;
+  background-color: $dark-grey;
+  opacity: 80%;
+  overflow-y: auto;
+  visibility: visible;
+  transition: visibility 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.contact-phone {
+  display: flex;
+}
+
+.contacts-adress--close {
+  visibility: visible;
+  transform: translateX(-120%);
+}
+
+.adress-remove {
+  @include btn-reset;
+  position: absolute;
+  top: 8px;
+  right: 18px;
+  padding-top: 13px;
+  background-color: transparent;
+  z-index: 1000;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.contacts-title-h3 {
+  margin: 0;
+  margin-bottom: 4px;
+  position: relative;
+  font-family: "TT Firs Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  color: $color-white;
+}
+
+.contacts-descr {
+  margin: 0;
+  margin-bottom: 3px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: $color-grey;
+}
+
+.menu-contact {
+  font-family: "TT Firs Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.contacts-block {
+  grid-column: 9 / -1;
+  width: 97%;
+}
+
+.form-title-h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "TT Firs Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  color: $dark-grey;
+}
+.contacts__form {
+  position: relative;
+}
+.js-validate-error-label {
+  position: absolute;
+  top: 4px;
+  left: 21px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+}
+
+.form-descr {
+  margin: 0;
+  margin-bottom: 14px;
+  width: 97%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-grey;
+}
+
+.contacts__form-input {
+  width: 104%;
+  height: 50px;
+  padding: 0 0 0 23px;
+  border: none;
+  outline: 0;
+  margin-bottom: 19px;
+  background-color: #e9e9e9;
+
+  ::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-grey;
+  }
+}
+
+.input-comments {
+  height: 150px;
+  padding-top: 15px;
+  resize: none;
+  margin-bottom: 16px;
+}
+
+.contacts__form-btn {
+  @include btn-reset;
+  width: 126px;
+  height: 50px;
+  background-color: $color-hover;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-white;
+  outline: 0;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: $color-focus;
+  }
+
+  &:focus-visible {
+    background-color: $color-hover;
+    border: 3px solid $color-active;
+  }
+
+  &:active {
+    background-color: $color-active;
+  }
+}
